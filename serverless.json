@@ -1,0 +1,51 @@
+{
+	"runtime": "nodejs18.x",
+	"version": "1.0",
+	"secrets": [
+		"buildQuoteKey",
+		"sandboxStripe",
+		"climateCleanKey",
+		"fieldMappingKey",
+		"contactSelfMappingKey",
+		"joinDateKey",
+		"stripeWebhookSecret"
+	],
+	"endpoints": {
+		"get-stripe-product-data": {
+			"method": ["GET", "POST"],
+			"file": "fetchStripeProductData.js"
+		},
+		"handle-customer-information": {
+			"method": ["GET", "POST"],
+			"file": "handleCustomerInformation.js"
+		},
+		"handle-submit": {
+			"method": ["GET", "POST"],
+			"file": "handleSubmit.js"
+		},
+		"handle-renewal-submit": {
+			"method": ["GET", "POST"],
+			"file": "handleRenewalSubmit.js"
+		},
+		"handle-renewal-purchase": {
+			"method": ["GET", "POST"],
+			"file": "handleRenewalPurchase.js"
+		},
+		"create-customer-portal-session": {
+			"method": ["GET", "POST"],
+			"file": "createCustomerPortalSession.js"
+		},
+		"fieldMappingFunctions": {
+			"method": ["GET", "POST"],
+			"file": "fieldMappingFunctions.js"
+		},
+		"mapContactSelfMapping": {
+			"method": ["GET", "POST"],
+			"file": "mapContactSelfMapping.js"
+		},
+		"join-date-mapping": {
+			"method": ["GET", "POST"],
+			"file": "join-date-mapping.js"
+		}
+	}
+}
